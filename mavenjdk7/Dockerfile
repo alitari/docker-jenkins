@@ -1,5 +1,5 @@
-FROM ubuntu:latest
-MAINTAINER Christophe Demarey
+FROM rangalo/java7
+MAINTAINER Alexander Krieg
 
 # Make sure the package repository is up to date.
 RUN echo "deb http://ppa.launchpad.net/natecarlson/maven3/ubuntu precise main" >> /etc/apt/sources.list
@@ -12,7 +12,7 @@ RUN apt-get install -y openssh-server
 RUN mkdir -p /var/run/sshd
 
 # Install JDK 7 (latest edition)
-RUN apt-get install -y --no-install-recommends openjdk-7-jdk
+#RUN apt-get install -y --no-install-recommends openjdk-7-jdk
 
 # Install packages needed for the build
 RUN apt-get install -y  --force-yes --no-install-recommends  git maven3
