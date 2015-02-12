@@ -1,4 +1,4 @@
-FROM rangalo/java8
+FROM dgageot/java8
 MAINTAINER Alexander Krieg
 # Make sure the package repository is up to date.
 RUN echo "deb http://ppa.launchpad.net/natecarlson/maven3/ubuntu precise main" >> /etc/apt/sources.list
