@@ -27,4 +27,7 @@ RUN echo "jenkins:jenkins" | chpasswd
 # Standard SSH port
 EXPOSE 22
 
+# Volume for docker certs
+VOLUME /home/jenkins/.docker
+
 CMD ["/usr/sbin/sshd", "-D"]
